@@ -7,24 +7,30 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-	
-	public LoginPage(WebDriver webDriver) {
-		PageFactory.initElements(webDriver, this);
-	}
-	
-	@FindBy(id="Email")
-	private WebElement txtEmail;
-	
-	@FindBy(id="Senha")
-	private WebElement txtSenha;
+    public LoginPage(WebDriver webDriver) {
+        PageFactory.initElements(webDriver, this);
+    }
 
-	public WebElement getTxtEmail() {
-		return txtEmail;
-	}
+    @FindBy(xpath = "//input[@id='Email']")
+    private WebElement txtEmail;
 
-	public WebElement getTxtSenha() {
-		return txtSenha;
-	}
-	
-	
+    @FindBy(xpath = "//input[@id='Password']")
+    private WebElement txtSenha;
+
+    @FindBy(xpath = "//input[@value='Log in']")
+    private WebElement btnLogin;
+
+    public WebElement getTxtEmail() {
+        return txtEmail;
+    }
+
+    public WebElement getTxtSenha() {
+        return txtSenha;
+    }
+
+    public WebElement getBtnLogin() {
+        return btnLogin;
+    }
+
+
 }

@@ -15,11 +15,11 @@ public class BaseTest {
 	protected static WebDriverWait wait;
 
 	protected void initializeWebApplication(BrowserImp webApplication) {
-		if (webDriver != null)
-			webDriver.close();
+//		if (webDriver != null)
+//			webDriver.close();
 
 		webDriver = webApplication.getDriver();
-		webDriver.manage().window().fullscreen();
+		webDriver.manage().window().maximize();
 		webDriver.get("http://demowebshop.tricentis.com/");
 		wait = new WebDriverWait(webDriver, 60);
 
@@ -30,6 +30,9 @@ public class BaseTest {
 		wait = new WebDriverWait(driver, 60);
 	}
 
+	public static WebDriver getWebDriver(){
+		return webDriver;
+	}
 
 
 	protected static void closeWeb() {

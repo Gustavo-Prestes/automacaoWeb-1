@@ -1,7 +1,8 @@
 package br.com.bootcamp.web.steps;
 
-import br.com.bootcamp.bean.commons.SeleniumRobot;
+import br.com.bootcamp.commons.SeleniumRobot;
 import br.com.bootcamp.funcionalidade.web.LoginFuncionalidade;
+import cucumber.api.PendingException;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Quando;
 
@@ -23,5 +24,10 @@ public class LoginSteps {
 	@Quando("^clico em \"([^\"]*)\"$")
 	public void clicoEm(String textoBotao) {
 		this.seleniumRobot.clicaBotaoPorTexto(textoBotao);
+	}
+
+	@Quando("^clico no botao Log in$")
+	public void clicoNoBotaoLogIn() {
+		this.loginFuncionalidade.clicaBotaoLogin();
 	}
 }

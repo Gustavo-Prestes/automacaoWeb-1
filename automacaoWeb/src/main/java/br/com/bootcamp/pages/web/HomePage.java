@@ -8,16 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
 	
 	public HomePage(WebDriver webDriver) {
-		
 		PageFactory.initElements(webDriver, this);
 	}
-	@FindBy(xpath = "//")
-	private WebElement btnTeste;
+	@FindBy(xpath = "//a[text()='testee@teste123.com']")
+	private WebElement btnUsuario;
 
-	public WebElement getBtnTeste() {
-		return btnTeste;
+	@FindBy(xpath = "//*[text()='Build your own expensive computer']")
+	private WebElement btnComputer;
+
+	public WebElement getBtnUsuario() {
+		return btnUsuario;
 	}
-	
-	
 
+	public WebElement getBtnComputer() {
+		return btnComputer;
+	}
 }

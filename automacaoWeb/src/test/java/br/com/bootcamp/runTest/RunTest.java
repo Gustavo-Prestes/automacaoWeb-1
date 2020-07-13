@@ -11,11 +11,12 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(monochrome = true, dryRun = false,
 		snippets = SnippetType.CAMELCASE,
 		plugin = {"pretty", "json:target/cucumber.json"},
-		features = {"./src/test/resources/features"}, glue = {
-		"br.com.bootcamp.web.steps", "br.com.bootcamp.mobile.steps",
+		features = {"./src/test/resources/features"},
+		glue = { "br.com.bootcamp.web.steps", "br.com.bootcamp.mobile.steps",
 		"br.com.bootcamp.settings", "br.com.bootcamp.commons",
 		"br.com.bootcamp.enums"},
-		tags = {"@mobile"})
+
+		tags = {"@web"})
 
 public class RunTest extends BaseTest {
 	
