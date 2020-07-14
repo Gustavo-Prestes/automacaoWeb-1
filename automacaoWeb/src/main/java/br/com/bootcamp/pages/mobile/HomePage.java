@@ -21,11 +21,18 @@ public class HomePage {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='About...']")
     private MobileElement menuAbout;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Alertas']")
+    private MobileElement menuAlertas;
+
     public MobileElement getMenuFormulario() {
         return menuFormulario;
     }
 
     public MobileElement getMenuAbout() {
         return menuAbout;
+    }
+
+    public MobileElement getMenuAlertas() {
+        return menuAlertas;
     }
 }

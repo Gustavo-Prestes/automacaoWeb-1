@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 		"br.com.bootcamp.settings", "br.com.bootcamp.commons",
 		"br.com.bootcamp.enums"},
 
-		tags = {"@web"})
+		tags = {"@mobile", "@formulario"})
 
 public class RunTest extends BaseTest {
 	

@@ -1,11 +1,12 @@
 #language: pt
 #encoding: UTF-8
-#author: marcos.barbosa
-#date: 08/07/2020
-#version: 1.0
+
 
 Funcionalidade: Teste execucao App
 
-  @mobile @test-mobile
+  @mobile @formulario
   Cenario: Execucao App
     Dado que toco na opção "Formulario"
+    E preencho os campos do formulario
+    Quando clico em salvar
+    Entao valido as opcoes validas na tela

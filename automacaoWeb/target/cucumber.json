@@ -8,128 +8,6 @@
       {
         "line": 2,
         "value": "#encoding: UTF-8"
-      },
-      {
-        "line": 3,
-        "value": "#author: marcos.barbosa"
-      },
-      {
-        "line": 4,
-        "value": "#date: 08/07/2020"
-      },
-      {
-        "line": 5,
-        "value": "#version: 1.0"
-      }
-    ],
-    "line": 7,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 22233056400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.beforeWeb()"
-            }
-          }
-        ],
-        "line": 10,
-        "name": "Realizar o cadastro com sucesso de um cliente válido",
-        "description": "",
-        "id": "realizar-cadastro-no-site;realizar-o-cadastro-com-sucesso-de-um-cliente-válido",
-        "after": [
-          {
-            "result": {
-              "duration": 651482700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.afterWeb()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Cenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 741482900,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "que clico no botao \"Register\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Register",
-                  "offset": 20
-                }
-              ],
-              "location": "HomeSteps.queClicoNoBotao(String)"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 2545968900,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "realizo o cadastro do cliente",
-            "match": {
-              "location": "CadastroSteps.realizoCadastroDoCliente()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 85361600,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "visualizo a mensagem \"Your registration completed\" na tela",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Your registration completed",
-                  "offset": 22
-                }
-              ],
-              "location": "CadastroSteps.visualizoAMensagemNaTela(String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "line": 9,
-            "name": "@web"
-          },
-          {
-            "line": 9,
-            "name": "@cadastro"
-          }
-        ]
-      }
-    ],
-    "name": "Realizar cadastro no site",
-    "description": "",
-    "id": "realizar-cadastro-no-site",
-    "keyword": "Funcionalidade",
-    "uri": "web/Cadastro.feature"
-  },
-  {
-    "comments": [
-      {
-        "line": 1,
-        "value": "#language: pt"
-      },
-      {
-        "line": 2,
-        "value": "#enconding: UTF-8"
       }
     ],
     "line": 5,
@@ -138,154 +16,26 @@
         "before": [
           {
             "result": {
-              "duration": 10523956400,
+              "duration": 8175705400,
               "status": "passed"
             },
             "match": {
-              "location": "Hooks.beforeWeb()"
-            }
-          }
-        ],
-        "line": 7,
-        "name": "Compra no cartao de credito",
-        "description": "",
-        "id": "realizar-compra-no-site;compra-no-cartao-de-credito",
-        "after": [
-          {
-            "result": {
-              "duration": 650023700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.afterWeb()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Cenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1470800800,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "que acesso a pagina inicial do site com usuario logado",
-            "match": {
-              "location": "HomeSteps.queAcessoAPaginaInicialDoSiteComUsuarioLogado()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 7501324300,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "seleciono o produto",
-            "match": {
-              "location": "HomeSteps.selecionoOProduto()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 3119531400,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "escolho as especificacoes desejadas",
-            "match": {
-              "location": "ComprasSteps.escolhoAsEspecificacoesDesejadas()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 4620698700,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "preencho os dados de envio e pagamento",
-            "match": {
-              "location": "CarrinhoSteps.preenchoOsDadosDeEnvioEPagamento()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 1134296000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "visualizo a mensagem \"Thank You\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Thank You",
-                  "offset": 22
-                }
-              ],
-              "location": "CarrinhoSteps.visualizoAMensagem(String)"
-            },
-            "keyword": "Entao "
-          }
-        ]
-      }
-    ],
-    "name": "Realizar compra no site",
-    "description": "",
-    "id": "realizar-compra-no-site",
-    "keyword": "Funcionalidade",
-    "uri": "web/CompraNoSite.feature",
-    "tags": [
-      {
-        "line": 4,
-        "name": "@web"
-      },
-      {
-        "line": 4,
-        "name": "@compra"
-      }
-    ]
-  },
-  {
-    "comments": [
-      {
-        "line": 1,
-        "value": "#language: pt"
-      },
-      {
-        "line": 2,
-        "value": "#enconding: UTF-8"
-      }
-    ],
-    "line": 6,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 23137418400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.beforeWeb()"
+              "location": "Hooks.beforeMobile()"
             }
           }
         ],
         "line": 8,
-        "name": "Deve apagar endereco no site com sucesso",
+        "name": "Execucao App",
         "description": "",
-        "id": "apagar-enderecos-no-site;deve-apagar-endereco-no-site-com-sucesso",
+        "id": "teste-execucao-app;execucao-app",
         "after": [
           {
             "result": {
-              "duration": 668171700,
+              "duration": 884322200,
               "status": "passed"
             },
             "match": {
-              "location": "Hooks.afterWeb()"
+              "location": "Hooks.afterMobile()"
             }
           }
         ],
@@ -294,215 +44,73 @@
         "steps": [
           {
             "result": {
-              "duration": 1397890800,
-              "status": "passed"
+              "duration": 1331445300,
+              "error_message": "org.openqa.selenium.UnsupportedCommandException: Unknown mobile command \"swipe\". Only shell,scrollBackTo,viewportScreenshot,deepLink,startLogsBroadcast,stopLogsBroadcast,acceptAlert,dismissAlert,batteryInfo,deviceInfo,changePermissions,getPermissions,performEditorAction,startScreenStreaming,stopScreenStreaming,getNotifications,listSms,type commands are supported.\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-U71U7E4\u0027, ip: \u002726.45.123.122\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.6\u0027\nDriver info: io.appium.java_client.android.AndroidDriver\nCapabilities {appActivity: com.ctappium.MainActivity, appPackage: com.ctappium, autoGrantPermissions: true, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.ctappium.MainActivity, appPackage: com.ctappium, autoGrantPermissions: true, automationName: uiautomator2, deviceName: Emulador, newCommandTimeOut: 120, platformName: android}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeOut: 120, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}\nSession ID: 21644cab-3935-4887-b1b8-65386ee46be3\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)\r\n\tat io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)\r\n\tat io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)\r\n\tat br.com.bootcamp.commons.AppiumRobot.swipe(AppiumRobot.java:39)\r\n\tat br.com.bootcamp.mobile.steps.HomeSteps.queTocoNaOpção(HomeSteps.java:20)\r\n\tat ✽.Dado que toco na opção \"Formulario\"(app/Formulario.feature:9)\r\n",
+              "status": "failed"
             },
             "line": 9,
-            "name": "que acesso a pagina inicial do site com usuario logado",
+            "name": "que toco na opção \"Formulario\"",
             "match": {
-              "location": "HomeSteps.queAcessoAPaginaInicialDoSiteComUsuarioLogado()"
+              "arguments": [
+                {
+                  "val": "Formulario",
+                  "offset": 19
+                }
+              ],
+              "location": "HomeSteps.queTocoNaOpção(String)"
             },
             "keyword": "Dado "
           },
           {
             "result": {
-              "duration": 449924300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
-            "name": "clico em meu email",
+            "name": "preencho os campos do formulario",
             "match": {
-              "location": "LimpaEnderecoSteps.clicoEmMeuEmail()"
+              "location": "FormularioSteps.preenchoOsCamposDoFormulario()"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 506810700,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 11,
-            "name": "vou em Addresses",
+            "name": "clico em salvar",
             "match": {
-              "location": "LimpaEnderecoSteps.vouEmAddresses()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 29090800,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "clico em Delete",
-            "match": {
-              "location": "LimpaEnderecoSteps.clicoEmDelete()"
+              "location": "FormularioSteps.clicoEmSalvar()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 86453600,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "o endereco e excluido",
-            "match": {
-              "location": "LimpaEnderecoSteps.oEnderecoEExcluido()"
-            },
-            "keyword": "Entao "
-          }
-        ]
-      }
-    ],
-    "name": "Apagar enderecos no site",
-    "description": "",
-    "id": "apagar-enderecos-no-site",
-    "keyword": "Funcionalidade",
-    "uri": "web/LimpaEndereco.feature",
-    "tags": [
-      {
-        "line": 4,
-        "name": "@web"
-      },
-      {
-        "line": 4,
-        "name": "@apagaEndereco"
-      }
-    ]
-  },
-  {
-    "comments": [
-      {
-        "line": 1,
-        "value": "#language: pt"
-      },
-      {
-        "line": 2,
-        "value": "#enconding: UTF-8"
-      },
-      {
-        "line": 3,
-        "value": "#author: marcos.barbosa"
-      },
-      {
-        "line": 4,
-        "value": "#date: 03/07/2020"
-      },
-      {
-        "line": 5,
-        "value": "#version: 1.0"
-      }
-    ],
-    "line": 8,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 25288349400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.beforeWeb()"
-            }
-          }
-        ],
-        "line": 10,
-        "name": "Realizar login na aplicação com usuário cadastrado",
-        "description": "",
-        "id": "validar-login-da-aplicação;realizar-login-na-aplicação-com-usuário-cadastrado",
-        "after": [
-          {
-            "result": {
-              "duration": 648991800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.afterWeb()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Cenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 551129600,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "que clico no botao \"Log in\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Log in",
-                  "offset": 20
-                }
-              ],
-              "location": "HomeSteps.queClicoNoBotao(String)"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 58668700,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 12,
-            "name": "preencho os dados de login com usuário \"cadastrado\"",
+            "name": "valido as opcoes validas na tela",
             "match": {
-              "arguments": [
-                {
-                  "val": "cadastrado",
-                  "offset": 40
-                }
-              ],
-              "location": "LoginSteps.preenchoOsDadosDeLoginComUsuário(String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 846358800,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "clico no botao Log in",
-            "match": {
-              "location": "LoginSteps.clicoNoBotaoLogIn()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 67881100,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "visualizo a tela inicial com meu usuario logado",
-            "match": {
-              "location": "HomeSteps.visualizoATelaInicialComMeuUsuarioLogado()"
+              "location": "FormularioSteps.validoAsOpcoesValidasNaTela()"
             },
             "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@mobile"
+          },
+          {
+            "line": 7,
+            "name": "@formulario"
           }
         ]
       }
     ],
-    "name": "Validar Login da aplicação",
+    "name": "Teste execucao App",
     "description": "",
-    "id": "validar-login-da-aplicação",
+    "id": "teste-execucao-app",
     "keyword": "Funcionalidade",
-    "uri": "web/Login.feature",
-    "tags": [
-      {
-        "line": 7,
-        "name": "@login"
-      },
-      {
-        "line": 7,
-        "name": "@web"
-      }
-    ]
+    "uri": "app/Formulario.feature"
   }
 ]

@@ -12,7 +12,6 @@ public enum MenuHomeImp implements MenuHome {
         public MobileElement getElement(HomePage menuHome) {
             return menuHome.getMenuFormulario();
         }
-
        },
 
     ABOUT {
@@ -21,5 +20,11 @@ public enum MenuHomeImp implements MenuHome {
             return menuHome.getMenuAbout();
         }
 
+    },
+    ALERTAS {
+        @Override
+        public MobileElement getElement(HomePage menuHome) {
+            return menuHome.getMenuAlertas();
+        }
     };
 }

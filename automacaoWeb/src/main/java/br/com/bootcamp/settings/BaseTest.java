@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.bootcamp.interfaces.BrowserImp;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseTest {
 
 	protected static AndroidDriver<MobileElement> driver;
@@ -27,7 +29,7 @@ public class BaseTest {
 
 	protected void initializeMobileApplication(MobileApplicationImp mobileApplicationImp){
 		driver = mobileApplicationImp.getDriver();
-		wait = new WebDriverWait(driver, 60);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	public static WebDriver getWebDriver(){
