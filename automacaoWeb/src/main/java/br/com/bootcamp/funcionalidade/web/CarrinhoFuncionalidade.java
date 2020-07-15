@@ -28,11 +28,7 @@ public class CarrinhoFuncionalidade extends BaseTest {
         seleniumRobot.clicaBotaoJS(carrinhoPage.getBoxCheckout());
         boolean textoEndCadastrado = seleniumRobot.verificaElementoPresenteTela(carrinhoPage.getValidaMsgEndereco());
         if (!textoEndCadastrado){
-            seleniumRobot.selecionaItemLista(carrinhoPage.getSelListCountry(), "Brazil");
-            seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpCity(), faker.address().cityName());
-            seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpAddress1(), faker.address().streetAddress());
-            seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpPostalCode(),faker.address().zipCode());
-            seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpPhoneNum(),faker.phoneNumber().cellPhone());
+            preencherPrimeiraParte();
         }
         seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnContinueBillingAddress());
         seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnContinueShippingAddress());
@@ -40,14 +36,28 @@ public class CarrinhoFuncionalidade extends BaseTest {
         seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnContinueShippingMethod());
         seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnCreditCard());
         seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnContinuePaymentMethod());
+
+        preencherSegundaParte();
+
+        seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnContinuePaymentInfo());
+        seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnConfirmOrder());
+    }
+
+    private void preencherPrimeiraParte() {
+        seleniumRobot.selecionaItemLista(carrinhoPage.getSelListCountry(), "Brazil");
+        seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpCity(), faker.address().cityName());
+        seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpAddress1(), faker.address().streetAddress());
+        seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpPostalCode(),faker.address().zipCode());
+        seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpPhoneNum(),faker.phoneNumber().cellPhone());
+    }
+
+    private void preencherSegundaParte() {
         seleniumRobot.selecionaItemLista(carrinhoPage.getSelCreditCard(), "Visa");
         seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpCardName(),faker.name().fullName());
         seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpCardNumber(),faker.finance().creditCard(CreditCardType.VISA));
         seleniumRobot.selecionaItemLista(carrinhoPage.getSelListExpirationMonth(),"10");
         seleniumRobot.selecionaItemLista(carrinhoPage.getSelListExpirationYear(), "2023");
         seleniumRobot.insireTextoNoElementoJS(carrinhoPage.getCmpCardCode(),String.valueOf(random.nextInt(899)+100));
-        seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnContinuePaymentInfo());
-        seleniumRobot.clicaBotaoJS(carrinhoPage.getBtnConfirmOrder());
     }
 
     public String retornaMensagem(){

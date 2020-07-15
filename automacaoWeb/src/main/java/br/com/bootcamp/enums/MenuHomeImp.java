@@ -26,5 +26,11 @@ public enum MenuHomeImp implements MenuHome {
         public MobileElement getElement(HomePage menuHome) {
             return menuHome.getMenuAlertas();
         }
+    },
+    SWIPE {
+        @Override
+        public MobileElement getElement(HomePage menuHome) {
+            return menuHome.getMenuSwipes();
+        }
     };
 }

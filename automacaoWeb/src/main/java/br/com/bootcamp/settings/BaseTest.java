@@ -30,6 +30,8 @@ public class BaseTest {
 	protected void initializeMobileApplication(MobileApplicationImp mobileApplicationImp){
 		driver = mobileApplicationImp.getDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		wait = new WebDriverWait(driver, 5);
+
 	}
 
 	public static WebDriver getWebDriver(){

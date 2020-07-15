@@ -24,6 +24,9 @@ public class HomePage {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Alertas']")
     private MobileElement menuAlertas;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Swipe']")
+    private MobileElement menuSwipes;
+
     public MobileElement getMenuFormulario() {
         return menuFormulario;
     }
@@ -34,5 +37,9 @@ public class HomePage {
 
     public MobileElement getMenuAlertas() {
         return menuAlertas;
+    }
+
+    public MobileElement getMenuSwipes() {
+        return menuSwipes;
     }
 }

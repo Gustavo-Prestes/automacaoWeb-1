@@ -16,7 +16,6 @@ public class HomeSteps {
 
     @Dado("^que toco na opção \"([^\"]*)\"$")
     public void queTocoNaOpção(String menu) {
-        this.homeFuncionalidade.selecionaMenu(menu);
-//        appiumRobot.swipe(300,1500,300,900,5);
+        this.homeFuncionalidade.selecionaMenu(menu, menu.equalsIgnoreCase("Swipe"));
     }
 }
